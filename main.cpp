@@ -6,6 +6,7 @@
 #include "searches/binary_seach.h"
 #include "searches/generator.h"
 #include "searches/busqueda_secuencial.h"
+#include "searches/Interpolation_search.h"
 #include <chrono>
 int array20[20]={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
 int array30[]={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29};
@@ -31,10 +32,19 @@ void time_binary() {
     std::cout << " Tiempo var al inicio en 20 : " << std::chrono::duration<double, std::milli>(dif).count()
               << std::endl;
 }
+void time_inter(){
+    auto start = std::chrono::steady_clock::now();
+    std::cout<< Interpolation_search::interpolationSearch(array80,80,100)<<std::endl;
+    auto end = std::chrono::steady_clock::now();
+    auto dif = end - start;
+    //__________________________________________________________________________________________________________-
+    std::cout << " Tiempo var al inicio en 20 : " << std::chrono::duration<double, std::milli>(dif).count()
+              << std::endl;
+}
 
 
 int main() {
 
-    time_secuencial();
+    time_inter();
     return 0;
 }

@@ -11,7 +11,7 @@ find_package(Qt5Network REQUIRED)
 find_package(Qt5Sql REQUIRED)
 find_package(Qt5PrintSupport REQUIRED)
 find_package(Qt5Xml REQUIRED)
-set(SOURCE_FILES main.cpp searches/binary_seach.cpp searches/binary_seach.h searches/generator.cpp searches/generator.h searches/busqueda_secuencial.cpp searches/busqueda_secuencial.h)
+set(SOURCE_FILES main.cpp searches/binary_seach.cpp searches/binary_seach.h searches/generator.cpp searches/generator.h searches/busqueda_secuencial.cpp searches/busqueda_secuencial.h searches/Interpolation_search.cpp searches/Interpolation_search.h)
 add_executable(Extra.Clase.3.datos ${SOURCE_FILES} main.cpp)
 target_link_libraries(Extra.Clase.3.datos json-c)
 target_link_libraries(Extra.Clase.3.datos Qt5::Widgets Qt5::Core Qt5::Network Qt5::Sql
